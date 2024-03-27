@@ -16,9 +16,7 @@ public class ProcessadorClassifierProcessorConfig {
 	@SuppressWarnings("rawtypes")
 	@Bean
 	public ItemProcessor processadorClassifierProcessor() {
-		return new ClassifierCompositeItemProcessorBuilder<>()
-				.classifier(processaConta())
-				.build();
+		return new ContaBancariaProcessor();
 	}
 
 	private Classifier processaConta() {
